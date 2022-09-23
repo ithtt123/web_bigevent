@@ -5,7 +5,7 @@ $(function () {
 
   // 点击按钮实现退出功能
   $('#btnLogoot').on('click', function () {
-    console.log('ok')
+    // console.log('ok')
     layer.confirm('确认退出登录', { icon: 3, title: '提示' },
       function (index) {
         //do something
@@ -14,11 +14,12 @@ $(function () {
         // 跳转页面到login
         location.href = 'login.html'
 
-        layer.close(index);
-      });
+        layer.close(index)
+      })
   })
 })
 
+// 获取信息
 function getUserInfo() {
   $.ajax({
     method: 'GET',
@@ -45,7 +46,7 @@ function renderAvatar(user) {
   $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
   // 渲染用户头像
   if (user.user_pic !== null) {
-    $('.layui-nav-img').attr('scr', user.user_pic).show()
+    $('.layui-nav-img').attr('src', user.user_pic).show()
     $('.text-avatar').hide()
   } else {
     $('.layui-nav-img').hide()
