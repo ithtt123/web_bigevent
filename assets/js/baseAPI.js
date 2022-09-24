@@ -1,8 +1,8 @@
 $.ajaxPrefilter(function (options) {
   // 统一设置根路径
-  options.url = 'http://www.liulongbin.top:3007' + options.url
+  // options.url = 'http://www.liulongbin.top:3007' + options.url
   // options.url = 'http://www.liulongbin.top:3008' + options.url
-  // options.url = 'http://big-event-api-t.itheima.net' + options.url
+  options.url = 'http://big-event-api-t.itheima.net' + options.url
   // console.log(options.url)
   // 统一设置headers请求头
   if (options.url.indexOf('/my/') !== -1) {
